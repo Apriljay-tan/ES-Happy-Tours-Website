@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta property="og:site_name" content="ES Happy Tours" />
+  <meta property="og:image" content="https://eshappytours.com/favicon.png" />
+  <meta name="twitter:image" content="https://eshappytours.com/favicon.png" />
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2161999427676069');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2161999427676069&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="See real ES Happy Tours guest memories, review screenshots, and client travel photos from Cebu private tours, joiner packages, Moalboal, Oslob, and Bohol countryside trips." />
+  <title>Happy Guests — ES Happy Tours</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/guests.css" />
+  <link rel="stylesheet" href="components/preloader/preloader.css" />
+  <link rel="stylesheet" href="components/contact-widget/contact-widget.css" />
+</head>
+<body>
+
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a class="nav-logo" href="home">
+        <img src="assets/images/eslogo.png" alt="ES Happy Tours" />
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="home">Home</a>
+        <a href="packages">Packages</a>
+        <a href="guests">Happy Guests</a>
+        <a href="hotels">Hotels</a>
+        <a href="contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-icon" id="btn-search" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="contact" class="btn-cta-nav">Book Now</a>
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="home">Home</a>
+    <a href="packages">Packages</a>
+    <a href="guests">Happy Guests</a>
+    <a href="hotels">Hotels</a>
+    <a href="contact">Contact</a>
+  </nav>
+
+  <div class="search-overlay" id="search-overlay" aria-hidden="true">
+    <div class="search-box">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search-input" placeholder="Search tours, destinations…" autocomplete="off" />
+      <button class="search-close" id="search-close" aria-label="Close search">✕</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════════ -->
+  <section class="guest-gallery-hero" aria-label="Happy guest gallery">
+    <div class="guest-gallery-hero__inner">
+      <div class="guest-gallery-slideshow reveal" data-guest-slideshow>
+        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide is-active" type="button" data-gallery-src="assets/images/moalboal.png" data-gallery-caption="Moalboal island and sea tour memories">
+          <img src="assets/images/moalboal.png" alt="Moalboal sea tour guest moment" />
+        </button>
+        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide" type="button" data-gallery-src="assets/images/Temple-of-Leah.webp" data-gallery-caption="Cebu City tour stop at Temple of Leah">
+          <img src="assets/images/Temple-of-Leah.webp" alt="Temple of Leah tour guest moment" />
+        </button>
+        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide" type="button" data-gallery-src="assets/images/IMG_0251.JPG" data-gallery-caption="Bohol countryside tour view">
+          <img src="assets/images/IMG_0251.JPG" alt="Bohol countryside tour view" />
+        </button>
+        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide" type="button" data-gallery-src="assets/images/IMG_0254.JPG" data-gallery-caption="Oslob whale shark experience">
+          <img src="assets/images/IMG_0254.JPG" alt="Oslob whale shark experience" />
+        </button>
+      </div>
+
+      <div class="guest-gallery-hero__overlay reveal reveal-delay-1">
+        <span>Real tours, real memories</span>
+        <h1>Happy Guests</h1>
+        <p>Snapshots from Cebu and Bohol trips planned with ES Happy Tours.</p>
+      </div>
+
+      <div class="guest-gallery-stack client-memory-strip" aria-label="Captured memories from guests">
+        <div class="client-memory-track">
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-1.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-1.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-2.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-2.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-3.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-3.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-4.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-4.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-5.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-5.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-6.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-6.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-1.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-1.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-2.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-2.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-3.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-3.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-4.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-4.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-5.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-5.jpg" alt="Client tour memory" />
+          </button>
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-6.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/client-memory-6.jpg" alt="Client tour memory" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       STATS BAR
+  ══════════════════════════════════════════════ -->
+  <section class="guest-seo-section">
+    <div class="inner">
+      <div class="guest-seo-card reveal">
+        <p>ES Happy Tours shares real guest memories from Cebu and Bohol tour packages, including private tours, joiner trips, city tours, Moalboal island hopping, Oslob whale shark experiences, and Bohol countryside adventures. Browse our guest photos and review screenshots to see the travel moments, service quality, local coordination, and smooth itinerary support that travelers can expect when booking with our Cebu-based tour team.</p>
+      </div>
+    </div>
+  </section>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       TESTIMONIALS GRID
+  ══════════════════════════════════════════════ -->
+  <section class="reviews-section">
+    <div class="inner">
+      <div class="section-hd reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Guest Reviews</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2>What Our <em>Guests</em> Say</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card review-only-image reveal reveal-delay-1">
+          <img class="review-screenshot" src="assets/images/review-1.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-2">
+          <img class="review-screenshot" src="assets/images/review-2.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-3">
+          <img class="review-screenshot" src="assets/images/review-3.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-1">
+          <img class="review-screenshot" src="assets/images/review-4.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-2">
+          <img class="review-screenshot" src="assets/images/review-5.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-3">
+          <img class="review-screenshot" src="assets/images/review-6.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       GALLERY STRIP
+  ══════════════════════════════════════════════ -->
+  <section class="gallery-section">
+    <div class="inner-hd">
+      <div class="section-hd reveal" style="text-align:left;margin-bottom:0;">
+        <div class="eyebrow" style="justify-content:flex-start;">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Guest Moments</span>
+        </div>
+        <h2>Captured <em>Memories</em></h2>
+      </div>
+    </div>
+    <div class="gallery-strip" style="margin-top:28px;">
+      <div class="gallery-track">
+        <div class="gallery-item"><img src="assets/images/moalboal.png" alt="Moalboal" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/Temple-of-Leah.webp" alt="Temple of Leah" loading="lazy" /></div>
+        <!-- Duplicate for loop -->
+        <div class="gallery-item"><img src="assets/images/moalboal.png" alt="Moalboal" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/Temple-of-Leah.webp" alt="Temple of Leah" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       CTA
+  ══════════════════════════════════════════════ -->
+  <section class="guests-cta">
+    <div class="inner">
+      <div class="guests-cta-card reveal">
+        <h2>Ready to Create Your <em>Own Memory?</em></h2>
+        <p>Join hundreds of happy travelers who trusted ES Happy Tours for their Cebu &amp; Bohol adventure.</p>
+        <div class="guests-cta-buttons">
+          <a href="packages" class="btn-primary">
+            Browse Packages
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="contact" class="btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="guest-lightbox" id="guest-lightbox" aria-hidden="true">
+    <button class="guest-lightbox__backdrop" type="button" aria-label="Close gallery image"></button>
+    <div class="guest-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Guest gallery image preview">
+      <button class="guest-lightbox__close" type="button" aria-label="Close gallery image">x</button>
+      <img class="guest-lightbox__image" src="" alt="" />
+      <p class="guest-lightbox__caption"></p>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><img src="assets/images/eslogo.png" alt="ES Happy Tours" /></div>
+        <p>Your premium travel partner for unforgettable experiences in Cebu &amp; Bohol, Philippines.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/YOUR_PAGE_HERE" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="home">Home</a></li><li><a href="packages">Tour Packages</a></li><li><a href="guests">Happy Guests</a></li><li><a href="hotels">Hotels</a></li><li><a href="contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Tours</h4><ul><li><a href="packages">Private Tours</a></li><li><a href="packages">Joiner Packages</a></li><li><a href="packages">Cebu Tours</a></li><li><a href="packages">Bohol Tours</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+63000000000">+63 000 000 0000</a></li><li><a href="mailto:info@syntrixph.com">info@syntrixph.com</a></li><li><a href="contact">Send Inquiry</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 ES Happy Tours. All rights reserved.</span>
+      <div class="footer-dev">
+        <img src="assets/images/SYNTRIX-LOGO-S.png" alt="Syntrix PH" />
+        <a href="https://syntrixph.com" target="_blank" rel="noopener noreferrer">Designed &amp; Developed by Syntrix PH</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="components/preloader/preloader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="components/contact-widget/contact-widget.js"></script>
+</body>
+</html>

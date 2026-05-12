@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta property="og:site_name" content="ES Happy Tours" />
+  <meta property="og:image" content="https://eshappytours.com/favicon.png" />
+  <meta name="twitter:image" content="https://eshappytours.com/favicon.png" />
+  <meta name="facebook-domain-verification" content="ryec776wc41lvu8zigvcuqryftrkrn" />
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2161999427676069');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2161999427676069&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="ES Happy Tours — Premium travel agency for Cebu & Bohol, Philippines. Private tours and joiner packages." />
+  <title>ES Happy Tours — Discover Cebu & Bohol</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="components/preloader/preloader.css" />
+  <link rel="stylesheet" href="components/package-modal/package-modal.css" />
+  <link rel="stylesheet" href="components/contact-widget/contact-widget.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "ES Happy Tours",
+    "url": "https://eshappytours.com/",
+    "logo": "https://eshappytours.com/favicon.png",
+    "image": "https://eshappytours.com/favicon.png",
+    "email": "info@syntrixph.com",
+    "telephone": "+639209851802",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sitio Capilis, Subabasbas",
+      "addressLocality": "Lapu-Lapu",
+      "postalCode": "6015",
+      "addressRegion": "Cebu",
+      "addressCountry": "PH"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61589540938601"
+    ]
+  }
+  </script></head>
+
+<body>
+
+  <!-- Background -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a class="nav-logo" href="home">
+        <img src="assets/images/eslogo.png" alt="ES Happy Tours" />
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="home">Home</a>
+        <a href="packages">Packages</a>
+        <a href="guests">Happy Guests</a>
+        <a href="hotels">Hotels</a>
+        <a href="contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-icon" id="btn-search" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+        <a href="contact" class="btn-cta-nav">Book Now</a>
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="home">Home</a>
+    <a href="packages">Packages</a>
+    <a href="guests">Happy Guests</a>
+    <a href="hotels">Hotels</a>
+    <a href="contact">Contact</a>
+  </nav>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="search-overlay" aria-hidden="true">
+    <div class="search-box">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#AEAEB2" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input type="text" id="search-input" placeholder="Search tours, destinations…" autocomplete="off" />
+      <button class="search-close" id="search-close" aria-label="Close search">✕</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-logo-wrap">
+      <img src="assets/images/eslogo.png" alt="ES Happy Tours" class="hero-logo" />
+    </div>
+
+    <div class="eyebrow hero-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Premium Travel · Cebu &amp; Bohol</span>
+      <span class="eyebrow-line"></span>
+    </div>
+
+    <h1>Discover <em>Cebu</em><br>&amp; <em>Bohol</em><br><span class="muted">Like Never Before</span></h1>
+
+    <p class="hero-sub">Your premium travel partner for unforgettable island experiences in the Philippines.</p>
+
+    <div class="hero-ctas">
+      <a href="packages" class="btn-primary">
+        Explore Packages
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+      <a href="contact" class="btn-outline">Contact Us</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>200<em>+</em></strong>
+        <span>Happy Guests</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <strong>5<em>+</em></strong>
+        <span>Years in Business</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="hero-stat">
+        <strong>50<em>+</em></strong>
+        <span>Destinations</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       DESTINATION STRIP
+  ══════════════════════════════════════════════ -->
+  <div class="dest-wrapper">
+    <div class="inner">
+      <p class="strip-label">Featured Destinations</p>
+    </div>
+    <div class="dest-strip">
+      <div class="dest-track">
+        <a class="dest-card" href="packages">
+          <img src="assets/images/16.jpg" alt="1D Cebu City Private Tour" loading="lazy" />
+          <div class="dest-info">
+            <span class="dest-tag">Cebu Private</span>
+            <div class="dest-name">1D Cebu City Private Tour</div>
+            <div class="dest-meta">1 Day</div>
+            <div class="dest-price">From ₱1,054 / pax</div>
+          </div>
+        </a>
+        <a class="dest-card" href="packages">
+          <img src="assets/images/17.jpg" alt="1D Moalboal Private Tour" loading="lazy" />
+          <div class="dest-info">
+            <span class="dest-tag">Cebu Private</span>
+            <div class="dest-name">1D Moalboal Private Tour</div>
+            <div class="dest-meta">1 Day</div>
+            <div class="dest-price">From ₱1,805 / pax</div>
+          </div>
+        </a>
+        <a class="dest-card" href="packages">
+          <img src="assets/images/1.jpg" alt="1D Oslob Private Tour" loading="lazy" />
+          <div class="dest-info">
+            <span class="dest-tag">Cebu Private</span>
+            <div class="dest-name">1D Oslob Private Tour</div>
+            <div class="dest-meta">1 Day</div>
+            <div class="dest-price">From ₱1,688 / pax</div>
+          </div>
+        </a>
+        <a class="dest-card" href="packages">
+          <img src="assets/images/IMG_0251.JPG" alt="1D Bohol Countryside Private Tour" loading="lazy" />
+          <div class="dest-info">
+            <span class="dest-tag">Bohol Private</span>
+            <div class="dest-name">1D Bohol Countryside Private Tour</div>
+            <div class="dest-meta">1 Day</div>
+            <div class="dest-price">From ₱2,145 / pax</div>
+          </div>
+        </a>
+        <a class="dest-card" href="packages">
+          <img src="assets/images/kawasan.jpg" alt="2D1N Moalboal and Oslob Private Tour" loading="lazy" />
+          <div class="dest-info">
+            <span class="dest-tag">Cebu Private</span>
+            <div class="dest-name">2D1N Moalboal + Oslob Private Tour</div>
+            <div class="dest-meta">2 Days 1 Night</div>
+            <div class="dest-price">From ₱3,375 / pax</div>
+          </div>
+        </a>
+        <a class="dest-card" href="packages">
+          <img src="assets/images/baclayon2.webp" alt="4D3N Cebu and Bohol Private Tour" loading="lazy" />
+          <div class="dest-info">
+            <span class="dest-tag">Cebu + Bohol</span>
+            <div class="dest-name">4D3N Cebu + Bohol Private Tour</div>
+            <div class="dest-meta">4 Days 3 Nights</div>
+            <div class="dest-price">From ₱6,358 / pax</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       FEATURED PACKAGES
+  ══════════════════════════════════════════════ -->
+  <section class="featured-section">
+    <div class="inner">
+      <div class="section-top">
+        <div class="section-hd">
+          <div class="eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">Handpicked for You</span>
+          </div>
+          <h2>Featured <em>Packages</em></h2>
+        </div>
+        <a href="packages" class="view-all-link">
+          View all packages
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="pkg-grid">
+        <div class="pkg-card searchable-card reveal" data-package-id="cebu-bohol-private" data-type="private"
+          data-dest="both" data-search="4d3n cebu bohol private city moalboal oslob chocolate hills hotel ferry">
+          <div class="pkg-card-img">
+            <img src="assets/images/baclayon2.webp" alt="4D3N Cebu and Bohol Private Tour" loading="lazy" />
+            <span class="pkg-badge featured">Featured</span>
+            <span class="pkg-dest-tag">Cebu + Bohol</span>
+          </div>
+          <div class="pkg-card-body">
+            <h3>4D3N Cebu + Bohol Private Tour</h3>
+            <div class="pkg-meta"><span class="pkg-duration">4 Days 3 Nights</span></div>
+            <div class="pkg-highlights">
+              <span class="pkg-highlight">Hotel Accommodation</span>
+              <span class="pkg-highlight">Private Transportation</span>
+              <span class="pkg-highlight">Ferry Assistance</span>
+              <span class="pkg-highlight">Tour Coordination</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label">Starting at</span>
+                <span class="price-amount">₱6,358</span>
+                <span class="price-per">/pax</span>
+              </div>
+              <button class="btn-book btn-details" type="button" data-package-id="cebu-bohol-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card reveal reveal-delay-2" data-package-id="moalboal-oslob-bohol-joiner"
+          data-type="joiner" data-dest="both"
+          data-search="3d2n moalboal oslob bohol joiner sardines whale shark chocolate hills ferry hotel">
+          <div class="pkg-card-img">
+            <img src="assets/images/2.jpg" alt="3D2N Moalboal Oslob and Bohol Joiner" loading="lazy" />
+            <span class="pkg-dest-tag">Joiner</span>
+          </div>
+          <div class="pkg-card-body">
+            <h3>3D2N Moalboal + Oslob + Bohol Joiner</h3>
+            <div class="pkg-meta"><span class="pkg-duration">3 Days 2 Nights</span></div>
+            <div class="pkg-highlights">
+              <span class="pkg-highlight">Transportation</span>
+              <span class="pkg-highlight">Hotel Accommodation</span>
+              <span class="pkg-highlight">Guide Fee</span>
+              <span class="pkg-highlight">Ferry Fare</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label">Starting at</span>
+                <span class="price-amount">₱7,487</span>
+                <span class="price-per">/pax</span>
+              </div>
+              <button class="btn-book btn-details" type="button" data-package-id="moalboal-oslob-bohol-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card reveal reveal-delay-3" data-package-id="cebu-city-joiner"
+          data-type="joiner" data-dest="cebu"
+          data-search="1d city joiner cebu temple of leah sirao tops magellan cross heritage tour">
+          <div class="pkg-card-img">
+            <img src="assets/images/16.jpg" alt="1D Cebu City Joiner Tour" loading="lazy" />
+            <span class="pkg-badge featured">Featured</span>
+            <span class="pkg-dest-tag">Cebu</span>
+          </div>
+          <div class="pkg-card-body">
+            <h3>1D City Tour</h3>
+            <div class="pkg-meta"><span class="pkg-duration">1 Day Tour</span></div>
+            <div class="pkg-highlights">
+              <span class="pkg-highlight">Temple of Leah</span>
+              <span class="pkg-highlight">Sirao Garden</span>
+              <span class="pkg-highlight">Magellan's Cross</span>
+              <span class="pkg-highlight">Entrance Fees</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price">
+                <span class="price-label">Starting at</span>
+                <span class="price-amount">₱1,480</span>
+                <span class="price-per">/pax</span>
+              </div>
+              <button class="btn-book btn-details" type="button" data-package-id="cebu-city-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       WHY CHOOSE US
+  ══════════════════════════════════════════════ -->
+  <section class="why-section">
+    <div class="inner">
+      <div class="section-hd reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Why Book With Us</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2>The <em>ES Happy Tours</em> Difference</h2>
+        <p>We don't just book tours — we craft experiences you'll remember for a lifetime.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-icon">🧭</div>
+          <h3>Expert Local Guides</h3>
+          <p>Our certified guides know every hidden gem, story, and shortcut in Cebu &amp; Bohol. Your safety and
+            enjoyment are their top priority.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-icon">🏨</div>
+          <h3>Curated Accommodations</h3>
+          <p>We partner with the best hotels and resorts so your rest is as beautiful as your adventure. Comfort
+            guaranteed.</p>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-icon">✨</div>
+          <h3>Best Price Guarantee</h3>
+          <p>Competitive pricing with transparent inclusions. No hidden fees, no surprises — just the best value for
+            your travel budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       HAPPY GUESTS PREVIEW
+  ══════════════════════════════════════════════ -->
+  <section class="testi-section">
+    <div class="inner">
+      <div class="section-hd reveal">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Real Reviews</span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2>What Our <em>Guests Say</em></h2>
+        <p>Over 200 happy travelers and counting. Here's what they have to say.</p>
+      </div>
+
+      <div class="facebook-review-placeholder reveal">
+        <div>
+          <span class="facebook-review-kicker">Facebook Reviews</span>
+          <h3>Real guest feedback from our tours</h3>
+          <p>We keep this space ready for recent Facebook review screenshots and guest messages, so visitors can see
+            the actual experiences shared by travelers after their Cebu and Bohol tours.</p>
+        </div>
+        <a href="https://www.facebook.com/profile.php?id=61589540938601" target="_blank" rel="noopener noreferrer">Open Facebook
+          Page</a>
+      </div>
+
+      <div class="testi-grid">
+        <article class="review-card review-image-card reveal reveal-delay-1">
+          <img src="assets/images/review-1.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+        </article>
+        <article class="review-card review-image-card reveal reveal-delay-2">
+          <img src="assets/images/review-2.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+        </article>
+        <article class="review-card review-image-card reveal reveal-delay-3">
+          <img src="assets/images/review-3.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+        </article>
+      </div>
+
+      <div class="testi-cta">
+        <a href="guests" class="view-all-link">
+          See all guest reviews
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════════════ -->
+  <section class="cta-banner">
+    <div class="inner">
+      <div class="cta-card reveal">
+        <h2>Ready to <em>Explore</em><br>the Philippines?</h2>
+        <p>Let us plan your perfect Cebu &amp; Bohol adventure. Private tours or joiner packages — we have everything
+          you need.</p>
+        <div class="cta-buttons">
+          <a href="packages" class="btn-primary">
+            Explore Packages
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+          <a href="contact"
+            style="display:inline-flex;align-items:center;gap:8px;padding:13px 26px;background:rgba(255,255,255,0.12);color:#fff;font-size:0.95rem;font-weight:600;border:1.5px solid rgba(255,255,255,0.25);border-radius:14px;transition:all .2s;">Talk
+            to Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-logo">
+          <img src="assets/images/eslogo.png" alt="ES Happy Tours" />
+        </div>
+        <p>Your premium travel partner for unforgettable experiences in Cebu &amp; Bohol, Philippines.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/ESHappyTours" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="home">Home</a></li>
+          <li><a href="packages">Tour Packages</a></li>
+          <li><a href="guests">Happy Guests</a></li>
+          <li><a href="hotels">Hotels</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Tours</h4>
+        <ul>
+          <li><a href="packages">Private Tours</a></li>
+          <li><a href="packages">Joiner Packages</a></li>
+          <li><a href="packages">Cebu Tours</a></li>
+          <li><a href="packages">Bohol Tours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+63000000000">+63 000 000 0000</a></li>
+          <li><a href="mailto:info@syntrixph.com">info@syntrixph.com</a></li>
+          <li><a href="contact">Send an Inquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 ES Happy Tours. All rights reserved.</span>
+      <div class="footer-dev">
+        <img src="assets/images/SYNTRIX-LOGO-S.png" alt="Syntrix PH" />
+        <a href="https://syntrixph.com" target="_blank" rel="noopener noreferrer">Designed &amp; Developed by Syntrix
+          PH</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="components/preloader/preloader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/package-data.js"></script>
+  <script src="components/package-modal/package-modal.js"></script>
+  <script src="components/contact-widget/contact-widget.js"></script>
+</body>
+
+</html>

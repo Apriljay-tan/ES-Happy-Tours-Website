@@ -1,0 +1,241 @@
+/* ============================================================
+   ES HAPPY TOURS — TOUR PACKAGES PAGE
+   packages.css  |  Syntrix PH © 2026
+   ============================================================ */
+
+
+/* ── PACKAGES PAGE HERO ──────────────────────────────────── */
+.pkg-page-hero {
+  position: relative; z-index: 1;
+  padding: 72px var(--pad-x) 48px;
+  text-align: center;
+}
+
+.pkg-page-hero .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+
+.pkg-page-hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  color: var(--gray-1); margin-bottom: 12px;
+}
+
+.pkg-page-hero p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: var(--gray-3); line-height: 1.7;
+  max-width: 520px; margin: 0 auto;
+}
+
+
+/* ── CONTROLS BAR ────────────────────────────────────────── */
+.pkg-controls {
+  position: relative; z-index: 1;
+  padding: 0 var(--pad-x) 48px;
+  max-width: var(--max-w); margin: 0 auto;
+}
+
+.pkg-controls-inner {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 20px;
+}
+
+
+/* ── SEGMENTED TOGGLE ─────────────────────────────────────── */
+.pkg-toggle-wrap {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+
+.toggle-label {
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gray-4);
+}
+
+.pkg-toggle {
+  display: inline-flex;
+  background: var(--gray-6);
+  border-radius: 16px;
+  padding: 5px;
+  gap: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06) inset;
+}
+
+.toggle-btn {
+  position: relative;
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 32px;
+  background: transparent; color: var(--gray-3);
+  font-family: inherit; font-size: 0.92rem; font-weight: 600;
+  border: none; border-radius: 12px;
+  cursor: pointer;
+  transition: color 0.25s var(--ease);
+  z-index: 1;
+}
+
+.toggle-btn svg { flex-shrink: 0; transition: color 0.25s; }
+
+.toggle-btn.active {
+  color: var(--gray-1);
+  background: var(--yellow);
+  box-shadow: 0 3px 14px rgba(255,214,10,0.38);
+}
+
+.toggle-btn:not(.active):hover { color: var(--gray-2); background: rgba(0,0,0,0.04); }
+
+.toggle-tag {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 2px 7px;
+  font-size: 0.6rem; font-weight: 800;
+  letter-spacing: 0.05em; border-radius: var(--r-pill);
+}
+
+.toggle-btn.active .toggle-tag { background: rgba(0,0,0,0.12); color: var(--gray-1); }
+.toggle-btn:not(.active) .toggle-tag { background: rgba(0,0,0,0.07); color: var(--gray-3); }
+
+
+/* ── FILTER CHIPS ROW ────────────────────────────────────── */
+.filter-chips {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 8px;
+}
+
+
+/* ── PACKAGE GRID ────────────────────────────────────────── */
+.packages-section {
+  position: relative; z-index: 1;
+  padding: 0 var(--pad-x) 100px;
+}
+
+.packages-section .inner { max-width: var(--max-w); margin: 0 auto; }
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Package Card — same as home.css pkg-card, defined in home.css */
+/* Plus extras specific to packages page: */
+
+.pkg-card.hidden {
+  display: none;
+}
+
+/* Count badge */
+.pkg-count-row {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 24px; gap: 12px;
+}
+
+.pkg-count {
+  font-size: 0.82rem; color: var(--gray-4); font-weight: 500;
+}
+
+.pkg-count strong { color: var(--gray-1); }
+
+.pkg-clear-search {
+  border: 1px solid rgba(229,229,234,0.95);
+  border-radius: var(--r-pill);
+  background: rgba(255,255,255,0.78);
+  color: var(--gray-2);
+  padding: 8px 14px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  box-shadow: var(--sh-sm);
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.pkg-clear-search:hover {
+  background: var(--yellow-soft);
+  border-color: rgba(255,190,0,0.45);
+  transform: translateY(-1px);
+}
+
+.searchable-card-match {
+  outline: 3px solid var(--yellow-warm);
+  outline-offset: 4px;
+}
+
+/* Empty state */
+.pkg-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--gray-4);
+}
+
+.pkg-empty .empty-icon {
+  font-size: 2.8rem; margin-bottom: 12px; display: block;
+}
+
+.pkg-empty p { font-size: 0.95rem; }
+
+.search-results-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 46px 24px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(255,255,255,0.92);
+  border-radius: var(--r-xl);
+  box-shadow: var(--sh-sm);
+}
+
+.search-results-empty .empty-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  background: var(--yellow-soft);
+  color: var(--yellow-deep);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.search-results-empty h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+
+.search-results-empty p {
+  color: var(--gray-3);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+
+/* ── PKG CARD IMAGE GRADIENTS ────────────────────────────── */
+.pkg-img-grad {
+  width: 100%; height: 100%;
+  display: flex; align-items: flex-end;
+}
+
+.grad-bohol    { background: linear-gradient(160deg, #3d8b37 0%, #a8c07a 50%, #f7e08c 100%); }
+.grad-kawasan  { background: linear-gradient(160deg, #1a78c2 0%, #56c0e0 50%, #a9e4dc 100%); }
+.grad-moalboal { background: linear-gradient(160deg, #0066a1 0%, #0ca4d1 50%, #72d9f0 100%); }
+.grad-cebu     { background: linear-gradient(160deg, #b45309 0%, #f59e0b 50%, #fde68a 100%); }
+.grad-oslob    { background: linear-gradient(160deg, #1e3a8a 0%, #2563eb 50%, #93c5fd 100%); }
+.grad-island   { background: linear-gradient(160deg, #065f46 0%, #10b981 50%, #6ee7b7 100%); }
+.grad-heritage { background: linear-gradient(160deg, #7c2d12 0%, #c2410c 50%, #fed7aa 100%); }
+.grad-combo    { background: linear-gradient(160deg, #4c1d95 0%, #7c3aed 50%, #c4b5fd 100%); }
+
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .packages-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .packages-grid { grid-template-columns: 1fr; }
+  .toggle-btn { padding: 11px 22px; font-size: 0.85rem; }
+  .pkg-controls-inner { gap: 16px; }
+}
+
+@media (max-width: 480px) {
+  .pkg-toggle { width: 100%; max-width: 340px; }
+  .toggle-btn { flex: 1; justify-content: center; }
+}

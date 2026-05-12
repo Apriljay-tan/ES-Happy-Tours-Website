@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta property="og:site_name" content="ES Happy Tours" />
+  <meta property="og:image" content="https://eshappytours.com/favicon.png" />
+  <meta name="twitter:image" content="https://eshappytours.com/favicon.png" />
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2161999427676069');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2161999427676069&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact ES Happy Tours to book your Cebu & Bohol adventure. We'd love to plan your perfect trip." />
+  <title>Contact Us — ES Happy Tours</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="components/preloader/preloader.css" />
+  <link rel="stylesheet" href="components/contact-widget/contact-widget.css" />
+</head>
+<body>
+
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a class="nav-logo" href="home">
+        <img src="assets/images/eslogo.png" alt="ES Happy Tours" />
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="home">Home</a>
+        <a href="packages">Packages</a>
+        <a href="guests">Happy Guests</a>
+        <a href="hotels">Hotels</a>
+        <a href="contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-icon" id="btn-search" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="contact" class="btn-cta-nav">Book Now</a>
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="home">Home</a>
+    <a href="packages">Packages</a>
+    <a href="guests">Happy Guests</a>
+    <a href="hotels">Hotels</a>
+    <a href="contact">Contact</a>
+  </nav>
+
+  <div class="search-overlay" id="search-overlay" aria-hidden="true">
+    <div class="search-box">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#AEAEB2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search-input" placeholder="Search tours, destinations…" autocomplete="off" />
+      <button class="search-close" id="search-close" aria-label="Close search">✕</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════════ -->
+  <div class="page-hero">
+    <div class="eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">We'd Love to Hear From You</span>
+      <span class="eyebrow-line"></span>
+    </div>
+    <h1>Get <em>In Touch</em></h1>
+    <p>Ready to plan your Cebu &amp; Bohol adventure? Send us an inquiry and we'll get back to you within 24 hours.</p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       CONTACT FORM + INFO
+  ══════════════════════════════════════════════ -->
+  <section class="contact-section">
+    <div class="inner">
+      <div class="contact-grid">
+
+        <!-- ── INQUIRY FORM ── -->
+        <div class="form-card reveal">
+          <h2 class="form-card-title">Send an Inquiry</h2>
+          <p class="form-card-sub">Fill out the form below and our team will respond within 24 hours.</p>
+
+          <form id="contact-form" action="/send-inquiry.php" method="post" novalidate>
+            <input type="text" id="website" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+<input type="hidden" id="f-page-url" name="page_url">
+<input type="hidden" id="f-referrer" name="referrer">
+<input type="hidden" id="f-submitted-at" name="submitted_at">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="f-name">Full Name <span class="req">*</span></label>
+                <input class="form-input" type="text" id="f-name" name="name" placeholder="Juan dela Cruz" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-email">Email Address <span class="req">*</span></label>
+                <input class="form-input" type="email" id="f-email" name="email" placeholder="juan@email.com" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="f-phone">Phone / Viber</label>
+                <input class="form-input" type="tel" id="f-phone" name="phone" placeholder="+63 917 000 0000" autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-persons">Number of Persons <span class="req">*</span></label>
+                <input class="form-input" type="number" id="f-persons" name="persons" placeholder="e.g. 4" min="1" max="50" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="f-tour-type">Tour Type <span class="req">*</span></label>
+                <select class="form-select" id="f-tour-type" name="tour_type" required>
+                  <option value="" disabled selected>Select tour type</option>
+                  <option value="private">Private Tour</option>
+                  <option value="joiner">Joiner Package</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-destination">Destination</label>
+                <select class="form-select" id="f-destination" name="destination">
+                  <option value="" disabled selected>Choose destination</option>
+                  <option value="cebu">Cebu</option>
+                  <option value="bohol">Bohol</option>
+                  <option value="both">Cebu + Bohol</option>
+                  <option value="undecided">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="f-package">Selected Package</label>
+              <input class="form-input" type="text" id="f-package" name="package" placeholder="Package selected from details" readonly />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="f-date">Preferred Travel Date</label>
+              <input class="form-input" type="date" id="f-date" name="date" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="f-message">Message</label>
+              <textarea class="form-textarea" id="f-message" name="message" placeholder="Tell us more about your trip, special requests, or any questions you have…"></textarea>
+            </div>
+
+            <button class="form-submit" type="submit" id="btn-submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Inquiry
+            </button>
+
+            <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+
+
+        <!-- ── CONTACT INFO ── -->
+        <div class="info-card reveal reveal-delay-2">
+          <h3 class="info-card-title">Contact Information</h3>
+
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-detail">
+              <strong>Address</strong>
+              <p>Sitio Capilis, Subabasbas, Lapu-Lapu, 6015 Cebu</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div class="info-detail">
+              <strong>Phone / Viber</strong>
+              <ul><a href="tel:+639209851802">+63 9209851802</a></ul>
+              <ul><a href="tel:+639175550793">+63 9175550793</a></ul>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-detail">
+              <strong>Email</strong>
+              <a href="mailto:info@syntrixph.com">info@syntrixph.com</a>
+            </div>
+          </div>
+
+          <a href="https://www.facebook.com/ESHappyTours" target="_blank" rel="noopener noreferrer" class="btn-facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Message us on Facebook
+          </a>
+
+          <div class="hours-card">
+            <h4>Office Hours</h4>
+            <div class="hours-row">
+              <span class="hours-days">Monday – Friday</span>
+              <span class="hours-time">8:00 AM – 6:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-days">Saturday</span>
+              <span class="hours-time">8:00 AM – 5:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-days">Sunday</span>
+              <span class="hours-time">9:00 AM – 3:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       MAP SECTION
+  ══════════════════════════════════════════════ -->
+  <section class="map-section">
+    <div class="inner">
+      <div class="section-hd reveal" style="text-align:left;margin-bottom:20px;">
+        <div class="eyebrow" style="justify-content:flex-start;">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Find Us</span>
+        </div>
+        <h2>Our <em>Location</em></h2>
+      </div>
+      <div class="map-container reveal">
+        <!-- Replace src with your actual Google Maps embed URL -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.973568353927!2d123.96872647605574!3d10.263713189855576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bb6978c1693%3A0xc9450e918ebc047!2sE.S.%20Happy%20Tours!5e0!3m2!1sen!2sph!4v1778467590645!5m2!1sen!2sph"
+          title="ES Happy Tours Location — Cebu City"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><img src="assets/images/eslogo.png" alt="ES Happy Tours" /></div>
+        <p>Your premium travel partner for unforgettable experiences in Cebu &amp; Bohol, Philippines.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/YOUR_PAGE_HERE" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="home">Home</a></li><li><a href="packages">Tour Packages</a></li><li><a href="guests">Happy Guests</a></li><li><a href="hotels">Hotels</a></li><li><a href="contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Tours</h4><ul><li><a href="packages">Private Tours</a></li><li><a href="packages">Joiner Packages</a></li><li><a href="packages">Cebu Tours</a></li><li><a href="packages">Bohol Tours</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+639209851802">+63 9209851802</a></li><li><a href="mailto:info@syntrixph.com">info@syntrixph.com</a></li><li><a href="contact">Send Inquiry</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 ES Happy Tours. All rights reserved.</span>
+      <div class="footer-dev">
+        <img src="assets/images/SYNTRIX-LOGO-S.png" alt="Syntrix PH" />
+        <a href="https://syntrixph.com" target="_blank" rel="noopener noreferrer">Designed &amp; Developed by Syntrix PH</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="components/preloader/preloader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="components/contact-widget/contact-widget.js"></script>
+</body>
+</html>

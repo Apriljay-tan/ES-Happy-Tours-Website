@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /.claude/
+Disallow: /.git/
+Disallow: /README.md
+
+# Add your final domain before deployment.
+# Sitemap: https://www.example.com/sitemap.xml

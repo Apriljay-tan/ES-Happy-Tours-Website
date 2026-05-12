@@ -1,0 +1,70 @@
+# ES Happy Tours - Hostinger/Apache hardening
+
+# Always serve text files as UTF-8 so symbols like ₱, ✓, and emoji render correctly.
+AddDefaultCharset UTF-8
+AddType "text/html; charset=UTF-8" .html
+AddType "text/css; charset=UTF-8" .css
+AddType "application/javascript; charset=UTF-8" .js
+
+<FilesMatch "^(home|packages|guests|hotels|contact)$">
+  ForceType "text/html; charset=UTF-8"
+</FilesMatch>
+
+# Enable URL rewriting for HTTPS enforcement.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS for all requests.
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Redirect old .html URLs to clean public URLs.
+  RewriteCond %{THE_REQUEST} \s/+index\.html[?\s] [NC]
+  RewriteRule ^index\.html$ /home [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[?\s] [NC]
+  RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+  # Serve clean URLs from the existing static HTML files.
+  RewriteRule ^home/?$ index.html [L]
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>
+
+# Disable directory listing so folders like /assets, /css, and /js cannot be browsed.
+Options -Indexes
+
+# Block hidden files and directories such as .env, .git, .claude, and .htaccess.
+# Keep .well-known available for SSL validation and standard site metadata.
+<IfModule mod_rewrite.c>
+  RewriteRule (^|/)\.(?!well-known/) - [F,L]
+</IfModule>
+
+# Block common sensitive, package, config, source-map, backup, archive, and log files.
+<FilesMatch "(^composer\.(json|lock)$|^package(-lock)?\.json$|^yarn\.lock$|^pnpm-lock\.yaml$|^webpack\.config\.js$|^vite\.config\.(js|ts)$|^config\.(js|json|php)$|^README\.md$|\.env$|\.ini$|\.log$|\.sql$|\.bak$|\.backup$|\.old$|\.orig$|\.tmp$|\.swp$|\.map$|\.zip$|\.rar$|\.7z$|\.tar$|\.gz$)">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  # Prevent MIME type sniffing.
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Prevent this site from being embedded in frames on other origins.
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Limit referrer leakage to third-party sites.
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Disable powerful browser features that this static site does not need.
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+
+  # Content Security Policy for the static site.
+  # Allows local assets, Google Fonts, Google Maps, Google Tag Manager, Google Analytics,
+  # Meta Pixel, and Messenger/Facebook chat integrations.
+  # Inline styles are temporarily allowed because the existing pages use style attributes.
+  # Keep tracking/chat snippets in external JS where possible; inline script snippets require
+  # a matching CSP hash/nonce or a deliberate script-src 'unsafe-inline' exception.
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com https://www.facebook.com https://web.facebook.com https://messenger.com https://www.messenger.com; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://www.facebook.com https://web.facebook.com https://connect.facebook.net https://graph.facebook.com; form-action 'self' mailto:; upgrade-insecure-requests"
+</IfModule>

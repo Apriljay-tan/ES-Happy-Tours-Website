@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta property="og:site_name" content="ES Happy Tours" />
+  <meta property="og:image" content="https://eshappytours.com/favicon.png" />
+  <meta name="twitter:image" content="https://eshappytours.com/favicon.png" />
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2161999427676069');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2161999427676069&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Browse our private tours and joiner packages for Cebu & Bohol. Affordable, curated, and unforgettable." />
+  <title>Tour Packages — ES Happy Tours</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/packages.css" />
+  <link rel="stylesheet" href="components/preloader/preloader.css" />
+  <link rel="stylesheet" href="components/package-modal/package-modal.css" />
+  <link rel="stylesheet" href="components/contact-widget/contact-widget.css" />
+</head>
+
+<body>
+
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header" id="site-header">
+    <div class="nav-container">
+      <a class="nav-logo" href="home">
+        <img src="assets/images/eslogo.png" alt="ES Happy Tours" />
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="home">Home</a>
+        <a href="packages">Packages</a>
+        <a href="guests">Happy Guests</a>
+        <a href="hotels">Hotels</a>
+        <a href="contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-icon" id="btn-search" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+        <a href="contact" class="btn-cta-nav">Book Now</a>
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="home">Home</a>
+    <a href="packages">Packages</a>
+    <a href="guests">Happy Guests</a>
+    <a href="hotels">Hotels</a>
+    <a href="contact">Contact</a>
+  </nav>
+
+  <div class="search-overlay" id="search-overlay" aria-hidden="true">
+    <div class="search-box">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="#AEAEB2" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input type="text" id="search-input" placeholder="Search tours, destinations…" autocomplete="off" />
+      <button class="search-close" id="search-close" aria-label="Close search">✕</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE HERO
+  ══════════════════════════════════════════════ -->
+  <div class="pkg-page-hero">
+    <div class="eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Cebu &amp; Bohol</span>
+      <span class="eyebrow-line"></span>
+    </div>
+    <h1>Tour <em>Packages</em></h1>
+    <p>Choose between fully private tours for your group or budget-friendly joiner packages. All curated for the best
+      experience.</p>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       CONTROLS (Toggle + Filters)
+  ══════════════════════════════════════════════ -->
+  <div class="pkg-controls">
+    <div class="pkg-controls-inner">
+
+      <!-- Segmented Toggle -->
+      <div class="pkg-toggle-wrap">
+        <div class="pkg-toggle" role="group" aria-label="Tour type">
+          <button class="toggle-btn active" data-type="private" aria-pressed="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+            Private Tour
+          </button>
+          <button class="toggle-btn" data-type="joiner" aria-pressed="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+              <line x1="9" y1="9" x2="9.01" y2="9" />
+              <line x1="15" y1="9" x2="15.01" y2="9" />
+            </svg>
+            Joiner Package
+          </button>
+        </div>
+      </div>
+
+      <!-- Destination Filter Chips -->
+      <div class="filter-chips" role="group" aria-label="Filter by destination">
+        <button class="chip filter-chip active" data-dest="all">All Destinations</button>
+        <button class="chip filter-chip" data-dest="cebu">
+          <span class="chip-pip"></span> Cebu
+        </button>
+        <button class="chip filter-chip" data-dest="bohol">
+          <span class="chip-pip"></span> Bohol
+        </button>
+        <button class="chip filter-chip" data-dest="both">
+          <span class="chip-pip"></span> Cebu + Bohol
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       PACKAGES GRID
+  ══════════════════════════════════════════════ -->
+  <section class="packages-section">
+    <div class="inner">
+
+      <div class="pkg-count-row">
+        <p class="pkg-count" id="pkg-count">Loading packages…</p>
+        <button class="pkg-clear-search" id="pkg-clear-search" type="button" hidden>Clear Search</button>
+      </div>
+
+      <div class="packages-grid">
+
+        <!-- PRIVATE TOURS -->
+        <div class="pkg-card searchable-card" data-package-id="cebu-city-private" data-type="private" data-dest="cebu"
+          data-search="1d cebu city private tour temple leah sirao taoist magellans cclex 10k roses">
+          <div class="pkg-card-img"><img
+              src="assets/images/16.jpg"
+              alt="1D Cebu City Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>1D Cebu City Private Tour</h3>
+            <div class="pkg-meta"><span class="pkg-duration">1 Day</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Private Transportation</span><span
+                class="pkg-highlight">Guide Assistance</span><span class="pkg-highlight">Selected Entrance Fees</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱1,054</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="cebu-city-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="moalboal-private" data-type="private" data-dest="cebu"
+          data-search="1d moalboal private sardines turtle snorkeling kawasan canyoneering">
+          <div class="pkg-card-img"><img
+              src="assets/images/17.jpg"
+              alt="1D Moalboal Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>1D Moalboal Private Tour</h3>
+            <div class="pkg-meta"><span class="pkg-duration">1 Day</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Sardines Run</span><span class="pkg-highlight">Sea
+                Turtle Encounter</span><span class="pkg-highlight">Private Drop-off</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱1,805</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="moalboal-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="oslob-private" data-type="private" data-dest="cebu"
+          data-search="1d oslob private whale shark tumalog sumilon cuartel simala">
+          <div class="pkg-card-img"><img
+              src="assets/images/IMG_0254.JPG"
+              alt="1D Oslob Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>1D Oslob Private Tour</h3>
+            <div class="pkg-meta"><span class="pkg-duration">1 Day</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Whale Shark Assistance</span><span
+                class="pkg-highlight">Sumilon Island</span><span class="pkg-highlight">Private Transport</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱1,688</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="oslob-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="bohol-private" data-type="private" data-dest="bohol"
+          data-search="1d bohol countryside private chocolate hills tarsier man made forest baclayon blood compact ferry">
+          <div class="pkg-card-img"><img src="assets/images/8.jpg" alt="1D Bohol Countryside Private Tour"
+              loading="lazy" /><span class="pkg-dest-tag">Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>1D Bohol Countryside Private Tour</h3>
+            <div class="pkg-meta"><span class="pkg-duration">1 Day</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Chocolate Hills</span><span
+                class="pkg-highlight">Tarsier Viewing</span><span class="pkg-highlight">Ferry Assistance</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱2,145</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="bohol-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="city-moalboal-private" data-type="private"
+          data-dest="cebu" data-search="2d1n city moalboal private cebu sardines hotel">
+          <div class="pkg-card-img"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sirao_Garden.jpg"
+              alt="2D1N City Moalboal Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N City + Moalboal Private</h3>
+            <div class="pkg-meta"><span class="pkg-duration">2D 1N</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">City Tour</span><span class="pkg-highlight">Moalboal
+                Tour</span><span class="pkg-highlight">Hotel Coordination</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱1,450</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="city-moalboal-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="city-oslob-private" data-type="private" data-dest="cebu"
+          data-search="2d1n city oslob private cebu tumalog sumilon hotel">
+          <div class="pkg-card-img"><img
+              src="assets/images/oslob2.jpg"
+              alt="2D1N City Oslob Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N City + Oslob Private</h3>
+            <div class="pkg-meta"><span class="pkg-duration">2D 1N</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">City Tour</span><span class="pkg-highlight">Oslob
+                Tour</span><span class="pkg-highlight">Flexible Pacing</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱2,030</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="city-oslob-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="city-bohol-private" data-type="private" data-dest="both"
+          data-search="2d1n city bohol private cebu chocolate hills ferry">
+          <div class="pkg-card-img"><img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Magellan%27s_Cross_Cebu_City.jpg"
+              alt="2D1N City Bohol Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu + Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N City + Bohol Private</h3>
+            <div class="pkg-meta"><span class="pkg-duration">2D 1N</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">City Tour</span><span class="pkg-highlight">Bohol
+                Tour</span><span class="pkg-highlight">Ferry Assistance</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱3,425</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="city-bohol-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="moalboal-oslob-private" data-type="private"
+          data-dest="cebu" data-search="2d1n moalboal oslob private sardines sumilon hotel">
+          <div class="pkg-card-img"><img
+              src="assets/images/moalboal.png"
+              alt="2D1N Moalboal Oslob Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N Moalboal + Oslob Private</h3>
+            <div class="pkg-meta"><span class="pkg-duration">2D 1N</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Ocean Adventures</span><span
+                class="pkg-highlight">Private Coordination</span><span class="pkg-highlight">Hotel Coordination</span>
+            </div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱3,375</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="moalboal-oslob-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="moalboal-bohol-private" data-type="private"
+          data-dest="both" data-search="2d1n moalboal bohol private sardines chocolate hills ferry">
+          <div class="pkg-card-img"><img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tarsier_Bohol.jpg"
+              alt="2D1N Moalboal Bohol Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu + Bohol</span>
+          </div>
+          <div class="pkg-card-body">
+            <h3>2D1N Moalboal + Bohol Private</h3>
+            <div class="pkg-meta"><span class="pkg-duration">2D 1N</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Moalboal Tour</span><span
+                class="pkg-highlight">Bohol Tour</span><span class="pkg-highlight">Ferry Assistance</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱4,016</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="moalboal-bohol-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="oslob-bohol-private" data-type="private" data-dest="both"
+          data-search="2d1n oslob bohol private sumilon chocolate hills ferry">
+          <div class="pkg-card-img"><img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Baclayon_Church_in_Bohol,_Philippines.JPG"
+              alt="2D1N Oslob Bohol Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu + Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N Oslob + Bohol Private</h3>
+            <div class="pkg-meta"><span class="pkg-duration">2D 1N</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Oslob Tour</span><span class="pkg-highlight">Bohol
+                Tour</span><span class="pkg-highlight">Ferry Assistance</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱4,016</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="oslob-bohol-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="city-moalboal-oslob-private" data-type="private"
+          data-dest="cebu" data-search="3d2n city moalboal oslob private cebu hotel">
+          <div class="pkg-card-img"><img
+              src="assets/images/1d.jpg"
+              alt="3D2N City Moalboal Oslob Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>3D2N City + Moalboal + Oslob Private</h3>
+            <div class="pkg-meta"><span class="pkg-duration">3D 2N</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">3 Activities</span><span
+                class="pkg-highlight">Complete Cebu Experience</span><span class="pkg-highlight">Hotel
+                Coordination</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱4,433</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="city-moalboal-oslob-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="moalboal-oslob-bohol-private" data-type="private"
+          data-dest="both" data-search="3d2n moalboal oslob bohol private ferry hotel chocolate hills">
+          <div class="pkg-card-img"><img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Oslob_Whale_shark.jpg"
+              alt="3D2N Moalboal Oslob Bohol Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu +
+              Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>3D2N Moalboal + Oslob + Bohol Private</h3>
+            <div class="pkg-meta"><span class="pkg-duration">3D 2N</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Ocean Activities</span><span
+                class="pkg-highlight">Bohol Tour</span><span class="pkg-highlight">Ferry Assistance</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱5,266</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="moalboal-oslob-bohol-private">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="cebu-bohol-private" data-type="private" data-dest="both"
+          data-search="4d3n cebu bohol private city moalboal oslob chocolate hills hotel ferry">
+          <div class="pkg-card-img"><img
+              src="assets/images/cebuhol.webp"
+              alt="4D3N Cebu Bohol Private Tour" loading="lazy" /><span class="pkg-dest-tag">Cebu + Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>4D3N Cebu + Bohol Private Tour</h3>
+            <div class="pkg-meta"><span class="pkg-duration">4D 3N</span><span class="pkg-badge private-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Private</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">4 Activities</span><span class="pkg-highlight">Hotel
+                Coordination</span><span class="pkg-highlight">Ferry Assistance</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱6,358</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="cebu-bohol-private">See Details</button>
+            </div>
+          </div>
+        </div>
+        <!-- JOINER PACKAGES -->
+        <div class="pkg-card searchable-card" data-package-id="cebu-city-joiner" data-type="joiner" data-dest="cebu"
+          data-search="1d city joiner cebu temple leah sirao tops taoist magellans cclex 10k roses">
+          <div class="pkg-card-img"><img
+              src="assets/images/16.jpg"
+              alt="1D City Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>1D City Joiner</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 1 Day</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">City Tour</span><span class="pkg-highlight">Minimum
+                2 Pax</span><span class="pkg-highlight">Entrance Fees</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱1,480</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="cebu-city-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="moalboal-joiner" data-type="joiner" data-dest="cebu"
+          data-search="1d moalboal joiner sardines run snorkeling coral turtle kawasan falls">
+          <div class="pkg-card-img"><img
+              src="assets/images/17.jpg"
+              alt="1D Moalboal Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>1D Moalboal Joiner</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 1 Day</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Moalboal Tour</span><span
+                class="pkg-highlight">Sardines Run</span><span class="pkg-highlight">Kawasan Falls</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱2,070</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="moalboal-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="oslob-joiner" data-type="joiner" data-dest="cebu"
+          data-search="1d oslob joiner tumalog sumilon cuartel simala whale shark">
+          <div class="pkg-card-img"><img
+              src="assets/images/IMG_0254.JPG" alt="1D Oslob Joiner"
+              loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>1D Oslob Joiner</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 1 Day</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Oslob Tour</span><span class="pkg-highlight">Sumilon
+                Island</span><span class="pkg-highlight">Simala Church</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱2,276</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="oslob-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="bohol-joiner" data-type="joiner" data-dest="bohol"
+          data-search="1d bohol joiner chocolate hills man made forest tarsier baclayon blood compact ferry">
+          <div class="pkg-card-img"><img
+              src="assets/images/8.jpg"
+              alt="1D Bohol Joiner" loading="lazy" /><span class="pkg-dest-tag">Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>1D Bohol Joiner</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 1 Day</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Bohol Tour</span><span class="pkg-highlight">Ferry
+                Fare</span><span class="pkg-highlight">Entrance Fees</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱3,229</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="bohol-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="city-moalboal-joiner" data-type="joiner" data-dest="cebu"
+          data-search="2d1n city moalboal joiner cebu sardines kawasan hotel">
+          <div class="pkg-card-img"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sirao_Garden.jpg"
+              alt="2D1N City Moalboal Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N City + Moalboal</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 2D 1N</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">City Tour</span><span class="pkg-highlight">Moalboal
+                Tour</span><span class="pkg-highlight">1 Hotel Night</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱3,945</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="city-moalboal-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="city-oslob-joiner" data-type="joiner" data-dest="cebu"
+          data-search="2d1n city oslob joiner cebu tumalog sumilon hotel">
+          <div class="pkg-card-img"><img
+              src="assets/images/oslob2.jpg"
+              alt="2D1N City Oslob Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N City + Oslob</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 2D 1N</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">City Tour</span><span class="pkg-highlight">Oslob
+                Tour</span><span class="pkg-highlight">1 Hotel Night</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱4,130</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="city-oslob-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="city-bohol-joiner" data-type="joiner" data-dest="both"
+          data-search="2d1n city bohol joiner cebu chocolate hills ferry hotel">
+          <div class="pkg-card-img"><img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Magellan%27s_Cross_Cebu_City.jpg"
+              alt="2D1N City Bohol Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu + Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N City + Bohol</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 2D 1N</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">City Tour</span><span class="pkg-highlight">Bohol
+                Tour</span><span class="pkg-highlight">Ferry Fare</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱5,459</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="city-bohol-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="moalboal-oslob-joiner" data-type="joiner"
+          data-dest="cebu" data-search="2d1n moalboal oslob joiner sardines kawasan tumalog sumilon hotel">
+          <div class="pkg-card-img"><img
+              src="assets/images/moalboal.png"
+              alt="2D1N Moalboal Oslob Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N Moalboal + Oslob</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 2D 1N</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Moalboal Tour</span><span
+                class="pkg-highlight">Oslob Tour</span><span class="pkg-highlight">1 Hotel Night</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱4,494</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="moalboal-oslob-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="moalboal-bohol-joiner" data-type="joiner"
+          data-dest="both" data-search="2d1n moalboal bohol joiner sardines chocolate hills ferry hotel">
+          <div class="pkg-card-img"><img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tarsier_Bohol.jpg"
+              alt="2D1N Moalboal Bohol Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu + Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N Moalboal + Bohol</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 2D 1N</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Moalboal Tour</span><span
+                class="pkg-highlight">Bohol Tour</span><span class="pkg-highlight">Ferry Fare</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱6,208</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="moalboal-bohol-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="oslob-bohol-joiner" data-type="joiner" data-dest="both"
+          data-search="2d1n oslob bohol joiner sumilon chocolate hills ferry hotel">
+          <div class="pkg-card-img"><img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Baclayon_Church_in_Bohol,_Philippines.JPG"
+              alt="2D1N Oslob Bohol Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu + Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>2D1N Oslob + Bohol</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 2D 1N</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">Oslob Tour</span><span class="pkg-highlight">Bohol
+                Tour</span><span class="pkg-highlight">Ferry Fare</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱6,272</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="oslob-bohol-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="city-moalboal-oslob-joiner" data-type="joiner"
+          data-dest="cebu" data-search="3d2n city moalboal oslob cebu joiner hotel sardines sumilon">
+          <div class="pkg-card-img"><img
+              src="assets/images/1d.jpg"
+              alt="3D2N City Moalboal Oslob Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu</span></div>
+          <div class="pkg-card-body">
+            <h3>3D2N City + Moalboal + Oslob</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 3D 2N</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">3 Activities</span><span class="pkg-highlight">2
+                Hotel Nights</span><span class="pkg-highlight">Cebu Package</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱5,238</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="city-moalboal-oslob-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="moalboal-oslob-bohol-joiner" data-type="joiner"
+          data-dest="both" data-search="3d2n moalboal oslob bohol joiner ferry hotel chocolate hills sardines">
+          <div class="pkg-card-img"><img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Oslob_Whale_shark.jpg"
+              alt="3D2N Moalboal Oslob Bohol Joiner" loading="lazy" /><span class="pkg-dest-tag">Cebu + Bohol</span>
+          </div>
+          <div class="pkg-card-body">
+            <h3>3D2N Moalboal + Oslob + Bohol</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 3D 2N</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">3 Activities</span><span class="pkg-highlight">2
+                Hotel Nights</span><span class="pkg-highlight">Ferry Fare</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱7,487</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="moalboal-oslob-bohol-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pkg-card searchable-card" data-package-id="cebu-moalboal-oslob-bohol-joiner" data-type="joiner"
+          data-dest="both" data-search="4d3n city moalboal oslob bohol joiner best seller hotel ferry">
+          <div class="pkg-card-img"><img
+              src="assets/images/cebuhol.webp"
+              alt="4D3N City Moalboal Oslob Bohol Joiner" loading="lazy" /><span class="pkg-badge featured">Best
+              Seller</span><span class="pkg-dest-tag">Cebu + Bohol</span></div>
+          <div class="pkg-card-body">
+            <h3>4D3N City + Moal + Oslob + Bohol</h3>
+            <div class="pkg-meta"><span class="pkg-duration"><svg xmlns="http://www.w3.org/2000/svg" width="12"
+                  height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg> 4D 3N</span><span class="pkg-badge joiner-tag"
+                style="position:static;font-size:0.55rem;padding:2px 8px;">Joiner</span></div>
+            <div class="pkg-highlights"><span class="pkg-highlight">4 Activities</span><span class="pkg-highlight">3
+                Hotel Nights</span><span class="pkg-highlight">Ferry Fare</span></div>
+            <div class="pkg-footer">
+              <div class="pkg-price"><span class="price-label">Starting at</span><span class="price-amount">₱7,937</span><span class="price-per">/pax</span></div><button class="btn-book btn-details"
+                type="button" data-package-id="cebu-moalboal-oslob-bohol-joiner">See Details</button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /packages-grid -->
+      <div class="search-results-empty" id="pkg-empty-search" hidden>
+        <span class="empty-icon">⌕</span>
+        <h3>No results found</h3>
+        <p>Try another keyword like Moalboal, Oslob, Bohol, City, Private, or Joiner.</p>
+        <button class="pkg-clear-search" type="button" data-clear-search>Clear Search</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-logo"><img src="assets/images/eslogo.png" alt="ES Happy Tours" /></div>
+        <p>Your premium travel partner for unforgettable experiences in Cebu &amp; Bohol, Philippines.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61589540938601" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="home">Home</a></li>
+          <li><a href="packages">Tour Packages</a></li>
+          <li><a href="guests">Happy Guests</a></li>
+          <li><a href="hotels">Hotels</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Tours</h4>
+        <ul>
+          <li><a href="packages">Private Tours</a></li>
+          <li><a href="packages">Joiner Packages</a></li>
+          <li><a href="packages">Cebu Tours</a></li>
+          <li><a href="packages">Bohol Tours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+63000000000">+63 000 000 0000</a></li>
+          <li><a href="mailto:info@syntrixph.com">info@syntrixph.com</a></li>
+          <li><a href="contact">Send Inquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 ES Happy Tours. All rights reserved.</span>
+      <div class="footer-dev">
+        <img src="assets/images/SYNTRIX-LOGO-S.png" alt="Syntrix PH" />
+        <a href="https://syntrixph.com" target="_blank" rel="noopener noreferrer">Designed &amp; Developed by Syntrix
+          PH</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="components/preloader/preloader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/package-data.js"></script>
+  <script src="js/packages.js"></script>
+  <script src="components/package-modal/package-modal.js"></script>
+  <script src="components/contact-widget/contact-widget.js"></script>
+</body>
+
+</html>
