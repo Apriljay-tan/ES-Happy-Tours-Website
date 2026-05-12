@@ -282,10 +282,6 @@ if (revealEls.length) {
     const phone = getValue('f-phone');
     const persons = getValue('f-persons');
     const tourType = getValue('f-tour-type');
-    const destination = getValue('f-destination');
-    const selectedPackage = getValue('f-package');
-    const travelDate = getValue('f-date');
-    const message = getValue('f-message');
 
     if (!name || !phone || !persons || !tourType) {
       setFeedback('error', 'Please fill in your name, phone number, number of persons, and tour type.');
@@ -326,13 +322,13 @@ if (revealEls.length) {
 
       const text = await response.text();
 
-let result;
-try {
-  result = JSON.parse(text);
-} catch (e) {
-  console.error('Server returned non-JSON response:', text);
-  throw new Error('Server error. Please check if send-inquiry.php is uploaded correctly.');
-}
+      let result;
+      try {
+        result = JSON.parse(text);
+      } catch (e) {
+        console.error('Server returned non-JSON response:', text);
+        throw new Error('Server error. Please check if send-inquiry.php is uploaded correctly.');
+      }
 
       if (!response.ok || !result.success) {
         throw new Error(result.message || 'Something went wrong. Please try again.');
@@ -342,19 +338,13 @@ try {
 
       if (typeof fbq === 'function') {
         fbq('track', 'Lead', {
-          content_name: selectedPackage || destination || 'Travel Inquiry',
+          content_name: getValue('f-package') || getValue('f-destination') || 'Travel Inquiry',
           tour_type: tourType,
           num_items: persons
         });
       }
 
       form.reset();
-
-      const packageField = document.getElementById('f-package');
-      if (packageField && selectedPackage) {
-        packageField.value = selectedPackage;
-      }
-
     } catch (error) {
       setFeedback('error', error.message || 'Unable to send inquiry. Please message us on Facebook or Viber.');
     } finally {
