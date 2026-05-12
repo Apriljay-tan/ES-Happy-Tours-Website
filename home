@@ -416,29 +416,17 @@
           <span class="eyebrow-line"></span>
         </div>
         <h2>What Our <em>Guests Say</em></h2>
-        <p>Over 200 happy travelers and counting. Here's what they have to say.</p>
-      </div>
-
-      <div class="facebook-review-placeholder reveal">
-        <div>
-          <span class="facebook-review-kicker">Facebook Reviews</span>
-          <h3>Real guest feedback from our tours</h3>
-          <p>We keep this space ready for recent Facebook review screenshots and guest messages, so visitors can see
-            the actual experiences shared by travelers after their Cebu and Bohol tours.</p>
-        </div>
-        <a href="https://www.facebook.com/profile.php?id=61589540938601" target="_blank" rel="noopener noreferrer">Open Facebook
-          Page</a>
       </div>
 
       <div class="testi-grid">
         <article class="review-card review-image-card reveal reveal-delay-1">
-          <img src="assets/images/review-1.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+          <img src="assets/images/reviews/1.png" alt="Guest review screenshot" loading="lazy" />
         </article>
         <article class="review-card review-image-card reveal reveal-delay-2">
-          <img src="assets/images/review-2.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+          <img src="assets/images/reviews/2.png" alt="Guest review screenshot" loading="lazy" />
         </article>
         <article class="review-card review-image-card reveal reveal-delay-3">
-          <img src="assets/images/review-3.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+          <img src="assets/images/reviews/3.png" alt="Guest review screenshot" loading="lazy" />
         </article>
       </div>
 

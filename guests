@@ -97,17 +97,17 @@
   <section class="guest-gallery-hero" aria-label="Happy guest gallery">
     <div class="guest-gallery-hero__inner">
       <div class="guest-gallery-slideshow reveal" data-guest-slideshow>
-        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide is-active" type="button" data-gallery-src="assets/images/moalboal.png" data-gallery-caption="Moalboal island and sea tour memories">
-          <img src="assets/images/moalboal.png" alt="Moalboal sea tour guest moment" />
+        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide is-active" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499352.jpg" data-gallery-caption="Client tour memory">
+          <img src="assets/images/happy%20guest/6055256898241499352.jpg" alt="ES Happy Tours guest memory" />
         </button>
-        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide" type="button" data-gallery-src="assets/images/Temple-of-Leah.webp" data-gallery-caption="Cebu City tour stop at Temple of Leah">
-          <img src="assets/images/Temple-of-Leah.webp" alt="Temple of Leah tour guest moment" />
+        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499353.jpg" data-gallery-caption="Client tour memory">
+          <img src="assets/images/happy%20guest/6055256898241499353.jpg" alt="ES Happy Tours guest memory" />
         </button>
-        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide" type="button" data-gallery-src="assets/images/IMG_0251.JPG" data-gallery-caption="Bohol countryside tour view">
-          <img src="assets/images/IMG_0251.JPG" alt="Bohol countryside tour view" />
+        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499354.jpg" data-gallery-caption="Client tour memory">
+          <img src="assets/images/happy%20guest/6055256898241499354.jpg" alt="ES Happy Tours guest memory" />
         </button>
-        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide" type="button" data-gallery-src="assets/images/IMG_0254.JPG" data-gallery-caption="Oslob whale shark experience">
-          <img src="assets/images/IMG_0254.JPG" alt="Oslob whale shark experience" />
+        <button class="guest-gallery-photo guest-gallery-photo--main guest-gallery-slide" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499355.jpg" data-gallery-caption="Client tour memory">
+          <img src="assets/images/happy%20guest/6055256898241499355.jpg" alt="ES Happy Tours guest memory" />
         </button>
       </div>
 
@@ -119,41 +119,41 @@
 
       <div class="guest-gallery-stack client-memory-strip" aria-label="Captured memories from guests">
         <div class="client-memory-track">
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-1.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-1.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499352.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499352.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-2.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-2.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499353.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499353.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-3.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-3.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499354.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499354.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-4.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-4.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499355.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499355.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-5.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-5.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499356.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499356.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-6.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-6.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499357.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499357.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-1.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-1.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499358.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499358.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-2.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-2.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499360.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499360.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-3.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-3.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499361.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499361.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-4.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-4.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499352.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499352.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-5.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-5.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499353.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499353.jpg" alt="Client tour memory" />
           </button>
-          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/client-memory-6.jpg" data-gallery-caption="Client tour memory">
-            <img src="assets/images/client-memory-6.jpg" alt="Client tour memory" />
+          <button class="guest-gallery-photo" type="button" data-gallery-src="assets/images/happy%20guest/6055256898241499354.jpg" data-gallery-caption="Client tour memory">
+            <img src="assets/images/happy%20guest/6055256898241499354.jpg" alt="Client tour memory" />
           </button>
         </div>
       </div>
@@ -190,22 +190,46 @@
 
       <div class="reviews-grid">
         <div class="review-card review-only-image reveal reveal-delay-1">
-          <img class="review-screenshot" src="assets/images/review-1.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+          <img class="review-screenshot" src="assets/images/reviews/1.png" alt="Guest review screenshot" loading="lazy" />
         </div>
         <div class="review-card review-only-image reveal reveal-delay-2">
-          <img class="review-screenshot" src="assets/images/review-2.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+          <img class="review-screenshot" src="assets/images/reviews/2.png" alt="Guest review screenshot" loading="lazy" />
         </div>
         <div class="review-card review-only-image reveal reveal-delay-3">
-          <img class="review-screenshot" src="assets/images/review-3.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+          <img class="review-screenshot" src="assets/images/reviews/3.png" alt="Guest review screenshot" loading="lazy" />
         </div>
         <div class="review-card review-only-image reveal reveal-delay-1">
-          <img class="review-screenshot" src="assets/images/review-4.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+          <img class="review-screenshot" src="assets/images/reviews/4.png" alt="Guest review screenshot" loading="lazy" />
         </div>
         <div class="review-card review-only-image reveal reveal-delay-2">
-          <img class="review-screenshot" src="assets/images/review-5.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+          <img class="review-screenshot" src="assets/images/reviews/5.png" alt="Guest review screenshot" loading="lazy" />
         </div>
         <div class="review-card review-only-image reveal reveal-delay-3">
-          <img class="review-screenshot" src="assets/images/review-6.jpg" alt="Guest review screenshot placeholder" loading="lazy" />
+          <img class="review-screenshot" src="assets/images/reviews/6.png" alt="Guest review screenshot" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-1">
+          <img class="review-screenshot" src="assets/images/reviews/7.png" alt="Guest review screenshot" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-2">
+          <img class="review-screenshot" src="assets/images/reviews/8.png" alt="Guest review screenshot" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-3">
+          <img class="review-screenshot" src="assets/images/reviews/9.png" alt="Guest review screenshot" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-1">
+          <img class="review-screenshot" src="assets/images/reviews/10.png" alt="Guest review screenshot" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-2">
+          <img class="review-screenshot" src="assets/images/reviews/11.png" alt="Guest review screenshot" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-3">
+          <img class="review-screenshot" src="assets/images/reviews/12.png" alt="Guest review screenshot" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-1">
+          <img class="review-screenshot" src="assets/images/reviews/13.png" alt="Guest review screenshot" loading="lazy" />
+        </div>
+        <div class="review-card review-only-image reveal reveal-delay-2">
+          <img class="review-screenshot" src="assets/images/reviews/14.png" alt="Guest review screenshot" loading="lazy" />
         </div>
       </div>
     </div>
@@ -227,11 +251,18 @@
     </div>
     <div class="gallery-strip" style="margin-top:28px;">
       <div class="gallery-track">
-        <div class="gallery-item"><img src="assets/images/moalboal.png" alt="Moalboal" loading="lazy" /></div>
-        <div class="gallery-item"><img src="assets/images/Temple-of-Leah.webp" alt="Temple of Leah" loading="lazy" /></div>
-        <!-- Duplicate for loop -->
-        <div class="gallery-item"><img src="assets/images/moalboal.png" alt="Moalboal" loading="lazy" /></div>
-        <div class="gallery-item"><img src="assets/images/Temple-of-Leah.webp" alt="Temple of Leah" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499352.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499353.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499354.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499355.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499356.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499357.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499358.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499360.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499361.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499352.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499353.jpg" alt="Client tour memory" loading="lazy" /></div>
+        <div class="gallery-item"><img src="assets/images/happy%20guest/6055256898241499354.jpg" alt="Client tour memory" loading="lazy" /></div>
       </div>
     </div>
   </section>
