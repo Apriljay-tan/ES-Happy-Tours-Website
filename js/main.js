@@ -131,45 +131,121 @@ if (revealEls.length) {
 /* Guest gallery lightbox */
 (function initGuestGalleryLightbox() {
   const lightbox = document.getElementById('guest-lightbox');
-  const triggers = document.querySelectorAll('[data-gallery-src]');
+  const galleryTriggers = Array.from(document.querySelectorAll('[data-gallery-src]'));
+  const reviewImages = Array.from(document.querySelectorAll('.review-screenshot'));
+  const triggers = [
+    ...galleryTriggers,
+    ...reviewImages.map(image => image.closest('.review-card') || image)
+  ];
   if (!lightbox || !triggers.length) return;
 
   const image = lightbox.querySelector('.guest-lightbox__image');
   const caption = lightbox.querySelector('.guest-lightbox__caption');
   const closeButtons = lightbox.querySelectorAll('.guest-lightbox__close, .guest-lightbox__backdrop');
+  const prevButton = lightbox.querySelector('.guest-lightbox__nav--prev');
+  const nextButton = lightbox.querySelector('.guest-lightbox__nav--next');
+  let activeIndex = 0;
 
-  const openLightbox = trigger => {
-    const src = trigger.dataset.gallerySrc;
-    const text = trigger.dataset.galleryCaption || trigger.querySelector('img')?.alt || 'Guest gallery image';
+  const getTriggerData = trigger => {
+    const triggerImage = trigger.matches('img') ? trigger : trigger.querySelector('img');
+    return {
+      src: trigger.dataset.gallerySrc || triggerImage?.currentSrc || triggerImage?.src || '',
+      text: trigger.dataset.galleryCaption || triggerImage?.alt || 'Guest gallery image'
+    };
+  };
+
+  const showImage = index => {
+    activeIndex = (index + triggers.length) % triggers.length;
+    const { src, text } = getTriggerData(triggers[activeIndex]);
     if (!src || !image || !caption) return;
 
     image.src = src;
     image.alt = text;
     caption.textContent = text;
+  };
+
+  const openLightbox = trigger => {
+    const index = triggers.indexOf(trigger);
+    showImage(index >= 0 ? index : 0);
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
+    document.body.dataset.lightboxPreviousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('lightbox-open');
   };
 
   const closeLightbox = () => {
     lightbox.classList.remove('is-open');
     lightbox.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    document.body.style.overflow = document.body.dataset.lightboxPreviousOverflow || '';
+    delete document.body.dataset.lightboxPreviousOverflow;
+    document.body.classList.remove('lightbox-open');
     if (image) image.src = '';
   };
 
   triggers.forEach(trigger => {
-    trigger.addEventListener('click', () => openLightbox(trigger));
+    trigger.addEventListener('click', event => {
+      event.preventDefault();
+      openLightbox(trigger);
+    });
+
+    if (trigger.classList.contains('review-card') || trigger.classList.contains('review-screenshot')) {
+      trigger.setAttribute('role', 'button');
+      trigger.setAttribute('tabindex', '0');
+      trigger.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openLightbox(trigger);
+        }
+      });
+    }
   });
 
   closeButtons.forEach(button => {
     button.addEventListener('click', closeLightbox);
   });
 
+  if (prevButton) {
+    prevButton.addEventListener('click', () => showImage(activeIndex - 1));
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener('click', () => showImage(activeIndex + 1));
+  }
+
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+    if (!lightbox.classList.contains('is-open')) return;
+
+    if (event.key === 'Escape') {
       closeLightbox();
+    } else if (event.key === 'ArrowLeft') {
+      showImage(activeIndex - 1);
+    } else if (event.key === 'ArrowRight') {
+      showImage(activeIndex + 1);
     }
+  });
+})();
+
+
+/* Captured memories endless scrolling */
+(function initCapturedMemoriesMarquee() {
+  const tracks = document.querySelectorAll('.gallery-track');
+  if (!tracks.length) return;
+
+  tracks.forEach(track => {
+    if (track.dataset.marqueeReady === 'true') return;
+
+    const items = Array.from(track.children);
+    if (!items.length) return;
+
+    track.dataset.marqueeReady = 'true';
+    track.style.setProperty('--gallery-item-count', String(items.length));
+
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
   });
 })();
 

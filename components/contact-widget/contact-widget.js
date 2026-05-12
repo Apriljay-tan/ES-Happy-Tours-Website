@@ -21,7 +21,7 @@
       label: 'Message / Email',
       detail: 'info@eshappytours.com',
       icon: 'email',
-      href: 'mailto:info@eshappytours.com'
+      href: 'contact'
     },
     {
       label: 'Telegram',
@@ -83,7 +83,16 @@
   widget.append(panel, toggle);
   document.body.appendChild(widget);
 
-  toggle.addEventListener('click', () => {
+  initDraggableContactWidget(widget, toggle);
+
+  toggle.addEventListener('click', event => {
+    if (widget.dataset.dragSuppressClick === 'true') {
+      event.preventDefault();
+      event.stopPropagation();
+      widget.dataset.dragSuppressClick = 'false';
+      return;
+    }
+
     const isOpen = widget.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
@@ -95,6 +104,128 @@
     }
   });
 })();
+
+function initDraggableContactWidget(widget, handle) {
+  const storageKey = 'esHappyToursContactWidgetPosition';
+  const dragState = {
+    pointerId: null,
+    startX: 0,
+    startY: 0,
+    offsetX: 0,
+    offsetY: 0,
+    moved: false
+  };
+
+  const getViewportBounds = () => ({
+    width: window.innerWidth || document.documentElement.clientWidth,
+    height: window.innerHeight || document.documentElement.clientHeight
+  });
+
+  const clampPosition = (left, top) => {
+    const bounds = getViewportBounds();
+    const rect = widget.getBoundingClientRect();
+    const margin = bounds.width <= 560 ? 10 : 14;
+    const maxLeft = Math.max(margin, bounds.width - rect.width - margin);
+    const maxTop = Math.max(margin, bounds.height - rect.height - margin);
+
+    return {
+      left: Math.min(Math.max(left, margin), maxLeft),
+      top: Math.min(Math.max(top, margin), maxTop)
+    };
+  };
+
+  const setWidgetPosition = (left, top, shouldStore) => {
+    const position = clampPosition(left, top);
+    widget.style.left = `${position.left}px`;
+    widget.style.top = `${position.top}px`;
+    widget.style.right = 'auto';
+    widget.style.bottom = 'auto';
+    widget.classList.add('is-positioned');
+
+    if (shouldStore) {
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(position));
+      } catch (error) {
+        // The widget still works if storage is unavailable.
+      }
+    }
+  };
+
+  const restorePosition = () => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) || 'null');
+      if (saved && Number.isFinite(saved.left) && Number.isFinite(saved.top)) {
+        setWidgetPosition(saved.left, saved.top, false);
+      }
+    } catch (error) {
+      try {
+        localStorage.removeItem(storageKey);
+      } catch (storageError) {
+        // Ignore storage cleanup failures.
+      }
+    }
+  };
+
+  const settlePositionInsideViewport = () => {
+    const rect = widget.getBoundingClientRect();
+    setWidgetPosition(rect.left, rect.top, widget.classList.contains('is-positioned'));
+  };
+
+  requestAnimationFrame(restorePosition);
+
+  handle.addEventListener('pointerdown', event => {
+    if (event.button !== undefined && event.button !== 0) return;
+
+    const rect = widget.getBoundingClientRect();
+    dragState.pointerId = event.pointerId;
+    dragState.startX = event.clientX;
+    dragState.startY = event.clientY;
+    dragState.offsetX = event.clientX - rect.left;
+    dragState.offsetY = event.clientY - rect.top;
+    dragState.moved = false;
+    widget.dataset.dragSuppressClick = 'false';
+    widget.classList.add('is-drag-ready');
+
+    handle.setPointerCapture(event.pointerId);
+  });
+
+  handle.addEventListener('pointermove', event => {
+    if (dragState.pointerId !== event.pointerId) return;
+
+    const deltaX = event.clientX - dragState.startX;
+    const deltaY = event.clientY - dragState.startY;
+
+    if (!dragState.moved && Math.hypot(deltaX, deltaY) < 6) return;
+
+    dragState.moved = true;
+    widget.classList.add('is-dragging');
+    widget.dataset.dragSuppressClick = 'true';
+    setWidgetPosition(event.clientX - dragState.offsetX, event.clientY - dragState.offsetY, false);
+  });
+
+  const finishDrag = event => {
+    if (dragState.pointerId !== event.pointerId) return;
+
+    try {
+      handle.releasePointerCapture(event.pointerId);
+    } catch (error) {
+      // Pointer capture may already be released by the browser.
+    }
+
+    widget.classList.remove('is-drag-ready', 'is-dragging');
+
+    if (dragState.moved) {
+      const rect = widget.getBoundingClientRect();
+      setWidgetPosition(rect.left, rect.top, true);
+    }
+
+    dragState.pointerId = null;
+  };
+
+  handle.addEventListener('pointerup', finishDrag);
+  handle.addEventListener('pointercancel', finishDrag);
+  window.addEventListener('resize', settlePositionInsideViewport);
+}
 
 function buildMessageIcon() {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');

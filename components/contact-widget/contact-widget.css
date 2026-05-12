@@ -11,6 +11,15 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.contact-widget.is-drag-ready,
+.contact-widget.is-dragging {
+  user-select: none;
+}
+
+.contact-widget.is-dragging {
+  transition: none;
+}
+
 .contact-widget-panel {
   display: grid;
   gap: 8px;
@@ -116,7 +125,13 @@
   box-shadow: 0 16px 38px rgba(28,28,30,0.22);
   font-size: 0.9rem;
   font-weight: 800;
+  cursor: grab;
+  touch-action: none;
   transition: transform 0.18s var(--ease), background 0.18s var(--ease), box-shadow 0.18s var(--ease);
+}
+
+.contact-widget.is-dragging .contact-widget-toggle {
+  cursor: grabbing;
 }
 
 .contact-widget-toggle:hover {
@@ -145,6 +160,7 @@
   .contact-widget {
     right: 14px;
     bottom: 14px;
+    max-width: calc(100vw - 20px);
   }
 
   .contact-widget-toggle {

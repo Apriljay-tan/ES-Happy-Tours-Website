@@ -291,7 +291,9 @@
     <button class="guest-lightbox__backdrop" type="button" aria-label="Close gallery image"></button>
     <div class="guest-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Guest gallery image preview">
       <button class="guest-lightbox__close" type="button" aria-label="Close gallery image">x</button>
+      <button class="guest-lightbox__nav guest-lightbox__nav--prev" type="button" aria-label="Previous image">&#8249;</button>
       <img class="guest-lightbox__image" src="" alt="" />
+      <button class="guest-lightbox__nav guest-lightbox__nav--next" type="button" aria-label="Next image">&#8250;</button>
       <p class="guest-lightbox__caption"></p>
     </div>
   </div>
@@ -325,7 +327,7 @@
   </footer>
 
   <script src="components/preloader/preloader.js"></script>
-  <script src="js/main.js?v=4"></script>
-  <script src="components/contact-widget/contact-widget.js"></script>
+  <script src="js/main.js?v=5"></script>
+  <script src="components/contact-widget/contact-widget.js?v=2"></script>
 </body>
 </html>
