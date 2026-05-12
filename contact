@@ -115,7 +115,11 @@ src="https://www.facebook.com/tr?id=2161999427676069&ev=PageView&noscript=1"
           <h2 class="form-card-title">Send an Inquiry</h2>
           <p class="form-card-sub">Fill out the form below and our team will respond within 24 hours.</p>
 
-          <form id="contact-form" action="mailto:info@syntrixph.com" method="post" enctype="text/plain" novalidate>
+          <form id="contact-form" action="/send-inquiry.php" method="post" novalidate>
+            <input type="text" id="website" name="website" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" id="f-page-url" name="page_url">
+            <input type="hidden" id="f-referrer" name="referrer">
+            <input type="hidden" id="f-submitted-at" name="submitted_at">
 
             <div class="form-row">
               <div class="form-group">
@@ -123,15 +127,15 @@ src="https://www.facebook.com/tr?id=2161999427676069&ev=PageView&noscript=1"
                 <input class="form-input" type="text" id="f-name" name="name" placeholder="Juan dela Cruz" autocomplete="name" required />
               </div>
               <div class="form-group">
-                <label class="form-label" for="f-email">Email Address <span class="req">*</span></label>
-                <input class="form-input" type="email" id="f-email" name="email" placeholder="juan@email.com" autocomplete="email" required />
+                <label class="form-label" for="f-email">Email Address</label>
+                <input class="form-input" type="email" id="f-email" name="email" placeholder="juan@email.com" autocomplete="email" />
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label" for="f-phone">Phone / Viber</label>
-                <input class="form-input" type="tel" id="f-phone" name="phone" placeholder="+63 917 000 0000" autocomplete="tel" />
+                <label class="form-label" for="f-phone">Phone / Viber <span class="req">*</span></label>
+                <input class="form-input" type="tel" id="f-phone" name="phone" placeholder="+63 917 000 0000" autocomplete="tel" required />
               </div>
               <div class="form-group">
                 <label class="form-label" for="f-persons">Number of Persons <span class="req">*</span></label>
@@ -210,7 +214,7 @@ src="https://www.facebook.com/tr?id=2161999427676069&ev=PageView&noscript=1"
             <div class="info-icon">📧</div>
             <div class="info-detail">
               <strong>Email</strong>
-              <a href="mailto:info@syntrixph.com">info@syntrixph.com</a>
+              <a href="contact">info@eshappytours.com</a>
             </div>
           </div>
 
@@ -283,7 +287,7 @@ src="https://www.facebook.com/tr?id=2161999427676069&ev=PageView&noscript=1"
       </div>
       <div class="footer-col"><h4>Pages</h4><ul><li><a href="home">Home</a></li><li><a href="packages">Tour Packages</a></li><li><a href="guests">Happy Guests</a></li><li><a href="hotels">Hotels</a></li><li><a href="contact">Contact</a></li></ul></div>
       <div class="footer-col"><h4>Tours</h4><ul><li><a href="packages">Private Tours</a></li><li><a href="packages">Joiner Packages</a></li><li><a href="packages">Cebu Tours</a></li><li><a href="packages">Bohol Tours</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+639209851802">+63 9209851802</a></li><li><a href="mailto:info@syntrixph.com">info@syntrixph.com</a></li><li><a href="contact">Send Inquiry</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+639209851802">+63 9209851802</a></li><li><a href="contact">info@eshappytours.com</a></li><li><a href="contact">Send Inquiry</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2026 ES Happy Tours. All rights reserved.</span>
@@ -295,7 +299,7 @@ src="https://www.facebook.com/tr?id=2161999427676069&ev=PageView&noscript=1"
   </footer>
 
   <script src="components/preloader/preloader.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=4"></script>
   <script src="components/contact-widget/contact-widget.js"></script>
 </body>
 </html>
