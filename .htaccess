@@ -47,6 +47,12 @@ Options -Indexes
   Require all denied
 </FilesMatch>
 
+# Block database schema files from direct browser access.
+<IfModule mod_rewrite.c>
+  RewriteRule ^database/ - [F,L]
+  RewriteRule ^admin/includes/ - [F,L]
+</IfModule>
+
 <IfModule mod_headers.c>
   # Prevent MIME type sniffing.
   Header always set X-Content-Type-Options "nosniff"

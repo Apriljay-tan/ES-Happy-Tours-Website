@@ -1,5 +1,4 @@
-/* Floating contact widget.
-   Edit the href values below when the official contact links are ready. */
+/* Floating contact widget */
 
 (function initContactWidget() {
   if (document.querySelector('.contact-widget')) return;
@@ -9,7 +8,7 @@
       label: 'WeChat',
       detail: 'Add your WeChat ID',
       icon: 'wechat',
-      href: '#wechat-id-placeholder'
+      href: 'contact'
     },
     {
       label: 'Messenger',
@@ -27,7 +26,7 @@
       label: 'Telegram',
       detail: 'Open Telegram',
       icon: 'telegram',
-      href: 'https://t.me/YOUR_TELEGRAM_USERNAME'
+      href: 'contact'
     }
   ];
 

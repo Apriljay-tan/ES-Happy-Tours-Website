@@ -793,57 +793,6 @@
   display: none;
 }
 
-.facebook-review-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  margin: 38px 0 28px;
-  padding: 24px;
-  background: rgba(255,255,255,0.78);
-  border: 1px solid rgba(255,255,255,0.92);
-  border-radius: var(--r-xl);
-  box-shadow: var(--sh-sm);
-}
-
-.facebook-review-kicker {
-  display: inline-block;
-  color: var(--yellow-deep);
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.facebook-review-placeholder h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 800;
-  letter-spacing: 0;
-  margin-bottom: 6px;
-}
-
-.facebook-review-placeholder p {
-  color: var(--gray-3);
-  font-size: 0.88rem;
-  line-height: 1.6;
-  max-width: 680px;
-}
-
-.facebook-review-placeholder a {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 11px 16px;
-  border-radius: var(--r-md);
-  background: var(--gray-1);
-  color: var(--white);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
 @media (max-width: 1024px) {
   .hero-inner {
     grid-template-columns: 1fr;
@@ -908,10 +857,6 @@
     height: 250px;
   }
 
-  .facebook-review-placeholder {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 
 @media (max-width: 480px) {
